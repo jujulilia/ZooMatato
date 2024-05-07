@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AnimalFormRequest;
-use App\Http\Requests\AnimalRequest;
+
 use App\Http\Requests\AnimalUpdateFormRequest;
 use App\Models\Animal;
 use Illuminate\Http\Request;
