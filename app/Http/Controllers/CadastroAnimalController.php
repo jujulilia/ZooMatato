@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class CadastroAnimalController extends Controller
 {
-    public function store(AnimalFormRequest $request){
+    public function criarAnimal(AnimalFormRequest $request){
         $animal = Animal::create([
             'nome' => $request->nome,
             'especie' => $request->especie,
