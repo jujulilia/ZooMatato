@@ -17,8 +17,8 @@ return new class extends Migration
             $table->integer('idade');
             $table->string('especie');
             $table->string('ra')->unique(); 
-            $table->decimal('peso', 8, 2); 
-            $table->decimal('altura', 5, 2); 
+            $table->number('peso', 8, 2); 
+            $table->number('altura', 5, 2); 
             $table->string('sexo');
             $table->string('dieta');
             $table->string('habitat');
