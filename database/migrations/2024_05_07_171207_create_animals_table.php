@@ -17,8 +17,8 @@ return new class extends Migration
             $table->integer('idade')->nullable(false);
             $table->string('especie')->nullable(false);
             $table->string('ra')->unique()->nullable(false); 
-            $table->number('peso', 8, 2)->nullable(false); 
-            $table->number('altura', 5, 2)->nullable(false); 
+            $table->decimal('peso', 8, 2)->nullable(false); 
+            $table->decimal('altura', 5, 2)->nullable(false); 
             $table->string('sexo')->nullable(false);
             $table->string('dieta')->nullable(false);
             $table->string('habitat')->nullable(false);

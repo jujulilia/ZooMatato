@@ -11,26 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('animals', function (Blueprint $table) {
-            $table->id();
-            $table->string('nome');
-            $table->integer('idade');
-            $table->string('especie');
-            $table->string('ra')->unique(); 
-            $table->number('peso', 8, 2); 
-            $table->number('altura', 5, 2); 
-            $table->string('sexo');
-            $table->string('dieta');
-            $table->string('habitat');
-            $table->timestamps();
-        });
-    }
-
+       Schema::create('personal_access_tokens', function (Blueprint $table) {
+        $table->id();
+        $table->morphs('tokenable');
+        $table->string('name');
+        $table->string('token', 64)->unique();
+        $table->text('abilities')->nullable(); 
+        $table->timestamp('last_used_at')->nullable(); 
+        $table->timestamp('expires_at') ->nullable();
+        $table->timestamps();
+          });
+        }
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('animals');
+        Schema::dropIfExists('personal_access_tokens');
     }
 };

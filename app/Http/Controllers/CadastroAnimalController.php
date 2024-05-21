@@ -154,7 +154,7 @@ if(count($animais) > 0){
 }
 
 public function retornarTodos(){
-    $animais = animal::all();
+    $animais = Animal::all();
 
     return response()-> json([
         'status' => true,
@@ -163,7 +163,7 @@ public function retornarTodos(){
   }
 
   public function pesquisarPorId($id){
-    $animal = animal::find($id);
+    $animal = Animal::find($id);
 
     if($animal == null){
         return response()->json([
